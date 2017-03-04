@@ -1,1 +1,0 @@
-/usr/bin/cc     CMakeFiles/RedBlueChannelSwap.dir/channel_swap.c.o  -o RedBlueChannelSwap -rdynamic 
