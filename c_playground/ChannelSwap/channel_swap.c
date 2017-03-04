@@ -9,12 +9,13 @@ void* generate_random_image(int width, int height)
     unsigned char* buffer = (unsigned char*)malloc(width * height * 4);
     if(buffer != NULL)
     {
+        
         for(i=0; i<width*height*4; i+=4)
         {
             buffer[i+0] = (unsigned char)(255);
             buffer[i+1] = (unsigned char)(0); 
             buffer[i+2] = (unsigned char)(0); 
-            buffer[i+3] = (unsigned char)(50); 
+            buffer[i+3] = (unsigned char)(rand() * 1000 % 128); 
         }
         return buffer;
     }
@@ -27,6 +28,8 @@ void* generate_random_image(int width, int height)
 
 void channel_swap(void* buffer, int size)
 {
+    /* Naive implemenation */
+    /* @todo : Optimize the following */
     unsigned char* imgBuf = (unsigned char*)buffer;
     int i = 0;
     unsigned char temp;
