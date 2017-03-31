@@ -4,15 +4,15 @@ import urllib.request
 
 
 def main():
-    print("Extract the names of all the halcon operators from the mvtec website")
-    
-    with urllib.request.urlopen('http://www.mvtec.com/doc/halcon/13/en/index_by_name.html') as response:
+    target_url = 'http://www.mvtec.com/doc/halcon/13/en/index_by_name.html' 
+    with urllib.request.urlopen(target_url) as response:
         page = response.read()
-        soup = bs(page)
+        soup = bs(page, "html.parser")
         soup.prettify()
         
         for anchor in soup.findAll('a', href=True):
-            print(anchor['href'])
+            if '.html' in anchor['href']:
+                print(anchor['href'].replace('.html',''))
 
 
 if __name__ == '__main__':
