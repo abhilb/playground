@@ -7,6 +7,7 @@
         $("document").ready(function(){
             $("#test_ajax_btn").click(function(){
                 $("#ajaxres").hide();
+                $("#ajaxins").html("adfadsf");
             });
         });
     </script>
@@ -16,6 +17,7 @@
     <button id="test_ajax_btn">Test ajax...</button>
     <div>
         <p id="ajaxres">Hide this by clicking the button</p>
+        <p id="ajaxins"></p>
     </div>
 </body>
 </html>
