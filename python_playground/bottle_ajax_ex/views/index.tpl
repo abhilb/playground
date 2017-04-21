@@ -6,8 +6,17 @@
     <script>
         $("document").ready(function(){
             $("#test_ajax_btn").click(function(){
-                $("#ajaxres").hide();
-                $("#ajaxins").html("adfadsf");
+                $.ajax({
+                    url: "/",
+                    method: "post",
+                    success: function(data){
+                        console.log(data);
+                        var newContent = $('<p></p>');
+                        newContent.text(data["test"]);
+                        $('#ajax_res').append(newContent);
+                    },
+                    dataType: "json"
+                });
             });
         });
     </script>
@@ -15,9 +24,7 @@
 <body>
     <h1>Ajax example... </h1>
     <button id="test_ajax_btn">Test ajax...</button>
-    <div>
-        <p id="ajaxres">Hide this by clicking the button</p>
-        <p id="ajaxins"></p>
+    <div id="ajax_res">
     </div>
 </body>
 </html>
