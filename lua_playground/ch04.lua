@@ -44,3 +44,40 @@ for k,v in pairs(days) do
 end
 print(revDays.Monday) -- prints 2
 
+
+-- More control structures
+-- if then else
+
+k = 10
+j = 13
+
+if k > 10 then 
+    print("K is bigger")
+elseif j < 20 then
+    print ("J is less than 20")
+else
+    print ("blah")
+end
+
+
+
+-- while and repeat
+print("While")
+local i = 1
+empty_table = {}
+while empty_table[i] do 
+    print("This will not get printed")
+    i = i + 1
+end
+
+while i < 10 do
+    print(i)
+    i = i+1
+end
+
+print("Repeat")
+repeat
+    print(i)
+    i = i-1
+until i < 0
+
