@@ -1,4 +1,4 @@
-
+#!/usr/bin/env lua
 
 
 -- Chapter 02 Types and values
@@ -23,3 +23,10 @@ print(type(print))      -- function
 print(type(true))       -- boolean
 print(type(nil))        -- nil
 
+
+-- We can use nil to delete a global variable
+--
+--
+-- Booleans - false and true
+-- Numbers - Lua has no integer type.. All numbers are represented as double precision floating point numbers.
+--

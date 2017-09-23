@@ -31,4 +31,16 @@ end
 print(found)
 
 
+-- Generic for loop
+-- The generic for loop traverses all the values returned by an iterator
+-- function
+-- for k,v in pairs(t) do print(k,v) end
+
+days = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"}
+revDays = {}
+for k,v in pairs(days) do 
+    print(k, v)
+    revDays[v] = k
+end
+print(revDays.Monday) -- prints 2
 
