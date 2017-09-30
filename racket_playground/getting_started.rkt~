@@ -1,0 +1,8 @@
+#lang racket
+
+(define (sum a b)(+ a b))
+
+(define (check a)
+  (cond [even? a] (0) (1)))
+  
+        
